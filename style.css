@@ -1,0 +1,374 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    font-size: 16px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Clock Styling */
+.clock {
+    color: #ecf0f1;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+    background-color: #34495e;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Media Query */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+}
+
+/* Home Section Styling */
+.section-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+
+.home-left {
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.home-left h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.home-left p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.home-left .typed {
+    color: #3498db;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.home-right {
+    max-width: 50%;
+    text-align: center;
+}
+
+.home-right .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-right .profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .section-home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .home-left, .home-right {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .home-left {
+        margin-bottom: 30px;
+    }
+
+    .home-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-left p {
+        font-size: 1rem;
+    }
+
+    .home-right .profile-pic {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* About Section Styling */
+.section-about {
+    padding: 60px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.section-about h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-about h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.credit-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.credit-card h3 {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.credit-card p {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+.credit-card h3::before {
+    content: "💳"; /* Card icon */
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #3498db;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .section-about h2 {
+        font-size: 2rem;
+    }
+
+    .credit-card {
+        padding: 20px 15px;
+    }
+
+    .credit-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .credit-card p {
+        font-size: 1rem;
+    }
+}
+
+/* General Section Styling */
+.section-services {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .section-services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .service-card h1 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #007bff; /* Blue color */
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 600px) {
+    .section-services {
+      padding: 60px;
+    }
+    
+    .service-card {
+      display: inline-block;
+      width: calc(50% - 40px);
+      vertical-align: top;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .service-card {
+      width: calc(25% - 40px);
+    }
+  }
+/* General Section Styling */
+.section-contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.section-contact:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.section-contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Contact Links Styling */
+.contact-link {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #007bff;
+    padding: 12px 20px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Location Styling */
+.location {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Logo Styling */
+.contact-logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Make logo circular */
+    border: 2px solid #007bff;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .section-contact {
+        padding: 60px 40px;
+        max-width: 800px;
+    }
+
+    .section-contact h2 {
+        font-size: 2.6rem;
+    }
+
+    .contact-link {
+        font-size: 1.4rem;
+        padding: 14px 24px;
+    }
+
+    .contact-logo img {
+        width: 150px;
+    }
+}
+  
